@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-03-11T12:40:37Z</date>
+    <date>2020-03-11T13:57:08Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -63,7 +63,7 @@
                             <preprocessing>
                                 <step>
                                     <type>JSONPATH</type>
-                                    <params>$.{#COUNTRY_NAME}.ActiveCases</params>
+                                    <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].ActiveCases</params>
                                 </step>
                             </preprocessing>
                             <master_item>
@@ -84,7 +84,7 @@
                             <preprocessing>
                                 <step>
                                     <type>JSONPATH</type>
-                                    <params>$.{#COUNTRY_NAME}.NewCases</params>
+                                    <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].NewCases</params>
                                 </step>
                             </preprocessing>
                             <master_item>
@@ -105,7 +105,7 @@
                             <preprocessing>
                                 <step>
                                     <type>JSONPATH</type>
-                                    <params>$.{#COUNTRY_NAME}.NewDeaths</params>
+                                    <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].NewDeaths</params>
                                 </step>
                             </preprocessing>
                             <master_item>
@@ -126,7 +126,7 @@
                             <preprocessing>
                                 <step>
                                     <type>JSONPATH</type>
-                                    <params>$.{#COUNTRY_NAME}.[&quot;Serious,Critical&quot;]</params>
+                                    <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].[&quot;Serious,Critical&quot;]</params>
                                 </step>
                             </preprocessing>
                             <master_item>
@@ -147,7 +147,7 @@
                             <preprocessing>
                                 <step>
                                     <type>JSONPATH</type>
-                                    <params>$.{#COUNTRY_NAME}.TotalCases</params>
+                                    <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].TotalCases</params>
                                 </step>
                             </preprocessing>
                             <master_item>
@@ -168,7 +168,7 @@
                             <preprocessing>
                                 <step>
                                     <type>JSONPATH</type>
-                                    <params>$.{#COUNTRY_NAME}.TotalDeaths</params>
+                                    <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].TotalDeaths</params>
                                 </step>
                             </preprocessing>
                             <master_item>
@@ -189,7 +189,7 @@
                             <preprocessing>
                                 <step>
                                     <type>JSONPATH</type>
-                                    <params>$.{#COUNTRY_NAME}.TotalRecovered</params>
+                                    <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].TotalRecovered</params>
                                 </step>
                             </preprocessing>
                             <master_item>
