@@ -19,7 +19,7 @@
             </groups>
             <applications>
                 <application>
-                    <name>COVID9 General Info</name>
+                    <name>covid19 General Info</name>
                 </application>
             </applications>
             <items>
@@ -28,7 +28,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>covid9_status.py</key>
+                    <key>covid19_status.py</key>
                     <delay>30m</delay>
                     <history>1d</history>
                     <trends>0</trends>
@@ -55,7 +55,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>COVID9 General Info</name>
+                            <name>covid19 General Info</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -85,11 +85,11 @@
             </items>
             <discovery_rules>
                 <discovery_rule>
-                    <name>COVID9 - Paises Afetados</name>
+                    <name>covid19 - Paises Afetados</name>
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>covid9_affectedcountries.py</key>
+                    <key>covid19_affectedcountries.py</key>
                     <delay>1h</delay>
                     <status>0</status>
                     <allowed_hosts/>
@@ -121,7 +121,7 @@
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>covid9.data[ActiveCases, &quot;{#COUNTRY_NAME}&quot;]</key>
+                            <key>covid19.data[ActiveCases, &quot;{#COUNTRY_NAME}&quot;]</key>
                             <delay>0</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -180,7 +180,7 @@
                                 </application_prototype>
                             </application_prototypes>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -188,7 +188,7 @@
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>covid9.data[CasesperMillion, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[CasesperMillion, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -247,7 +247,7 @@
                                 </application_prototype>
                             </application_prototypes>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -255,7 +255,7 @@
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>covid9.data[NewCases, &quot;{#COUNTRY_NAME}&quot;]</key>
+                            <key>covid19.data[NewCases, &quot;{#COUNTRY_NAME}&quot;]</key>
                             <delay>0</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -314,7 +314,7 @@
                                 </application_prototype>
                             </application_prototypes>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -322,7 +322,7 @@
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>covid9.data[NewDeaths, &quot;{#COUNTRY_NAME}&quot;]</key>
+                            <key>covid19.data[NewDeaths, &quot;{#COUNTRY_NAME}&quot;]</key>
                             <delay>0</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -381,7 +381,7 @@
                                 </application_prototype>
                             </application_prototypes>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -389,7 +389,7 @@
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>covid9.data[Serious, &quot;{#COUNTRY_NAME}&quot;]</key>
+                            <key>covid19.data[Serious, &quot;{#COUNTRY_NAME}&quot;]</key>
                             <delay>0</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -448,7 +448,7 @@
                                 </application_prototype>
                             </application_prototypes>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -456,7 +456,7 @@
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>covid9.data[TotalCases, &quot;{#COUNTRY_NAME}&quot;]</key>
+                            <key>covid19.data[TotalCases, &quot;{#COUNTRY_NAME}&quot;]</key>
                             <delay>0</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -515,7 +515,7 @@
                                 </application_prototype>
                             </application_prototypes>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -523,7 +523,7 @@
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>covid9.data[TotalDeaths, &quot;{#COUNTRY_NAME}&quot;]</key>
+                            <key>covid19.data[TotalDeaths, &quot;{#COUNTRY_NAME}&quot;]</key>
                             <delay>0</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -582,7 +582,7 @@
                                 </application_prototype>
                             </application_prototypes>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -590,7 +590,7 @@
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>covid9.data[TotalRecovered, &quot;{#COUNTRY_NAME}&quot;]</key>
+                            <key>covid19.data[TotalRecovered, &quot;{#COUNTRY_NAME}&quot;]</key>
                             <delay>0</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -649,7 +649,7 @@
                                 </application_prototype>
                             </application_prototypes>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                     </item_prototypes>
@@ -682,7 +682,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>MONITORAMENTO DO CORONAVIRUS - COVID-9</host>
-                                        <key>covid9.data[ActiveCases, &quot;{#COUNTRY_NAME}&quot;]</key>
+                                        <key>covid19.data[ActiveCases, &quot;{#COUNTRY_NAME}&quot;]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -694,7 +694,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>MONITORAMENTO DO CORONAVIRUS - COVID-9</host>
-                                        <key>covid9.data[NewCases, &quot;{#COUNTRY_NAME}&quot;]</key>
+                                        <key>covid19.data[NewCases, &quot;{#COUNTRY_NAME}&quot;]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -706,7 +706,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>MONITORAMENTO DO CORONAVIRUS - COVID-9</host>
-                                        <key>covid9.data[NewDeaths, &quot;{#COUNTRY_NAME}&quot;]</key>
+                                        <key>covid19.data[NewDeaths, &quot;{#COUNTRY_NAME}&quot;]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -718,7 +718,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>MONITORAMENTO DO CORONAVIRUS - COVID-9</host>
-                                        <key>covid9.data[Serious, &quot;{#COUNTRY_NAME}&quot;]</key>
+                                        <key>covid19.data[Serious, &quot;{#COUNTRY_NAME}&quot;]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -730,7 +730,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>MONITORAMENTO DO CORONAVIRUS - COVID-9</host>
-                                        <key>covid9.data[TotalCases, &quot;{#COUNTRY_NAME}&quot;]</key>
+                                        <key>covid19.data[TotalCases, &quot;{#COUNTRY_NAME}&quot;]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -742,7 +742,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>MONITORAMENTO DO CORONAVIRUS - COVID-9</host>
-                                        <key>covid9.data[CasesperMillion, {#COUNTRY_NAME}]</key>
+                                        <key>covid19.data[CasesperMillion, {#COUNTRY_NAME}]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -754,7 +754,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>MONITORAMENTO DO CORONAVIRUS - COVID-9</host>
-                                        <key>covid9.data[TotalDeaths, &quot;{#COUNTRY_NAME}&quot;]</key>
+                                        <key>covid19.data[TotalDeaths, &quot;{#COUNTRY_NAME}&quot;]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -766,7 +766,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>MONITORAMENTO DO CORONAVIRUS - COVID-9</host>
-                                        <key>covid9.data[TotalRecovered, &quot;{#COUNTRY_NAME}&quot;]</key>
+                                        <key>covid19.data[TotalRecovered, &quot;{#COUNTRY_NAME}&quot;]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>

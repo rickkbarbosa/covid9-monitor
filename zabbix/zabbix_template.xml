@@ -29,7 +29,7 @@
                 <item>
                     <name>Covid 19 Full Info</name>
                     <type>EXTERNAL</type>
-                    <key>covid9_status.py</key>
+                    <key>covid19_status.py</key>
                     <delay>30m</delay>
                     <history>1d</history>
                     <trends>0</trends>
@@ -45,14 +45,14 @@
                 <discovery_rule>
                     <name>COVID19 - Affected Countries</name>
                     <type>EXTERNAL</type>
-                    <key>covid9_affectedcountries.py</key>
+                    <key>covid19_affectedcountries.py</key>
                     <delay>1h</delay>
                     <lifetime>365d</lifetime>
                     <item_prototypes>
                         <item_prototype>
                             <name>[ {#COUNTRY_NAME} ] - ActiveCases</name>
                             <type>DEPENDENT</type>
-                            <key>covid9.data[ActiveCases, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[ActiveCases, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <value_type>FLOAT</value_type>
                             <applications>
@@ -67,13 +67,13 @@
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
                             <name>[ {#COUNTRY_NAME} ] - Cases per Million habitants</name>
                             <type>DEPENDENT</type>
-                            <key>covid9.data[CasesperMillion, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[CasesperMillion, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <value_type>FLOAT</value_type>
                             <applications>
@@ -88,13 +88,13 @@
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
                             <name>[ {#COUNTRY_NAME} ] - NewCases</name>
                             <type>DEPENDENT</type>
-                            <key>covid9.data[NewCases, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[NewCases, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <value_type>FLOAT</value_type>
                             <applications>
@@ -109,13 +109,13 @@
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
                             <name>[ {#COUNTRY_NAME} ] - NewDeaths</name>
                             <type>DEPENDENT</type>
-                            <key>covid9.data[NewDeaths, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[NewDeaths, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <value_type>FLOAT</value_type>
                             <applications>
@@ -130,13 +130,13 @@
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
                             <name>[ {#COUNTRY_NAME} ] - Serious,Critical</name>
                             <type>DEPENDENT</type>
-                            <key>covid9.data[Serious, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[Serious, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <value_type>FLOAT</value_type>
                             <applications>
@@ -151,13 +151,13 @@
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
                             <name>[ {#COUNTRY_NAME} ] - TotalCases</name>
                             <type>DEPENDENT</type>
-                            <key>covid9.data[TotalCases, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[TotalCases, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <value_type>FLOAT</value_type>
                             <applications>
@@ -172,13 +172,13 @@
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
                             <name>[ {#COUNTRY_NAME} ] - TotalDeaths</name>
                             <type>DEPENDENT</type>
-                            <key>covid9.data[TotalDeaths, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[TotalDeaths, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <value_type>FLOAT</value_type>
                             <applications>
@@ -193,13 +193,13 @@
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
                             <name>[ {#COUNTRY_NAME} ] - TotalRecovered</name>
                             <type>DEPENDENT</type>
-                            <key>covid9.data[TotalRecovered, {#COUNTRY_NAME}]</key>
+                            <key>covid19.data[TotalRecovered, {#COUNTRY_NAME}]</key>
                             <delay>0</delay>
                             <value_type>FLOAT</value_type>
                             <applications>
@@ -214,7 +214,7 @@
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>covid9_status.py</key>
+                                <key>covid19_status.py</key>
                             </master_item>
                         </item_prototype>
                     </item_prototypes>
