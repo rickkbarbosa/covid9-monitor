@@ -21,7 +21,8 @@ Add template to a host
 ![Using on Zabbix](zabbix_template.png)
 
 ### To grafana
-Install Zabbix Plugin datasource by [Alexander Zobnin](https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app)
-Install Polystat grafana plugin(https://grafana.com/grafana/plugins/grafana-polystat-panel/installation)
-Import dashboard to grafana
-Points your Zabbix datasource
+
+* Install Zabbix Plugin datasource by [Alexander Zobnin](https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app)
+* Install Polystat grafana plugin(https://grafana.com/grafana/plugins/grafana-polystat-panel/installation)
+* Import dashboard _grafana_dashboard.json_ to grafana 
+* Points your Zabbix datasource
