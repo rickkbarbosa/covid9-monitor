@@ -21,5 +21,6 @@ Add template to a host
 ![Using on Zabbix](zabbix_template.png)
 
 ### To grafana
+Install Zabbix Plugin datasource by [Alexander Zobnin](https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app)
 Import dashboard to grafana
 Points your Zabbix datasource
