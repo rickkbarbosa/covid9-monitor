@@ -27,6 +27,9 @@ Add template to a host
 * Import dashboard _grafana_dashboard.json_ to grafana 
 * Points your Zabbix datasource
 
+### License
+
+See LICENSE
 
 ### Thanks 
 
