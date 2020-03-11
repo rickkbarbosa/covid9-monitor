@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-03-11T04:14:08Z</date>
+    <date>2020-03-11T12:40:37Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -30,6 +30,7 @@
                     <name>Covid 9 Full Info</name>
                     <type>EXTERNAL</type>
                     <key>covid9_status.py</key>
+                    <delay>30m</delay>
                     <history>1d</history>
                     <trends>0</trends>
                     <value_type>TEXT</value_type>
@@ -125,7 +126,7 @@
                             <preprocessing>
                                 <step>
                                     <type>JSONPATH</type>
-                                    <params>$.{#COUNTRY_NAME}.Serious\,Critical</params>
+                                    <params>$.{#COUNTRY_NAME}.[&quot;Serious,Critical&quot;]</params>
                                 </step>
                             </preprocessing>
                             <master_item>
@@ -198,12 +199,6 @@
                     </item_prototypes>
                 </discovery_rule>
             </discovery_rules>
-            <macros>
-                <macro>
-                    <macro>{$TRADER_API_URL}</macro>
-                    <value>https://www.mercadobitcoin.net/api</value>
-                </macro>
-            </macros>
         </template>
     </templates>
 </zabbix_export>
