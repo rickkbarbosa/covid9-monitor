@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 Clone repository in a plase acessible by Zabbix (usually, /usr/lib/zabbix/externalscripts)
 install python requirements on requirements.txt
-Import template to zabbix dashboard (zabbix/zabbix_template.xml or zabbix/zabbix_template-4.0.xml)
+Import template to zabbix dashboard (zabbix/zabbix_template.xml - Zabbix server 4.0 and above)
 Add template to a host
 
 ![Using on Zabbix](zabbix_template.png)
@@ -35,3 +35,4 @@ See LICENSE
 ### Thanks 
 
 * [Zabbix Brasil](https://t.me/ZabbixBrasil) , for reviews and help with cleanup/garbage collecting
+* Everaldo Santos Cabral, for Suggested applications organiztions and Zabbix 4.0 retro-compatible template
