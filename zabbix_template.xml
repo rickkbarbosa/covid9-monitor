@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-03-11T17:16:39Z</date>
+    <date>2020-03-11T19:08:15Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template - Covid9</template>
-            <name>Coronavirus - Covid9 monitoring</name>
+            <template>Template - Covid19</template>
+            <name>Coronavirus - Covid19 monitoring</name>
             <description>Getting cases from worldometers.info and plotting on Zabbix</description>
             <groups>
                 <group>
@@ -19,7 +19,7 @@
             </groups>
             <applications>
                 <application>
-                    <name>COVID9 General Info</name>
+                    <name>COVID19 General Info</name>
                 </application>
                 <application>
                     <name>Covid Data</name>
@@ -27,7 +27,7 @@
             </applications>
             <items>
                 <item>
-                    <name>Covid 9 Full Info</name>
+                    <name>Covid 19 Full Info</name>
                     <type>EXTERNAL</type>
                     <key>covid9_status.py</key>
                     <delay>30m</delay>
@@ -36,14 +36,14 @@
                     <value_type>TEXT</value_type>
                     <applications>
                         <application>
-                            <name>COVID9 General Info</name>
+                            <name>COVID19 General Info</name>
                         </application>
                     </applications>
                 </item>
             </items>
             <discovery_rules>
                 <discovery_rule>
-                    <name>COVID9 - Affected Countries</name>
+                    <name>COVID19 - Affected Countries</name>
                     <type>EXTERNAL</type>
                     <key>covid9_affectedcountries.py</key>
                     <delay>1h</delay>

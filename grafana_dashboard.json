@@ -82,7 +82,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1583946366181,
+  "iteration": 1583953292350,
   "links": [],
   "panels": [
     {
@@ -1229,7 +1229,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "COVID9 - Coronavirus",
+  "title": "COVID-19 / Coronavirus",
   "uid": "9EA_kA2sWz",
-  "version": 6
+  "version": 7
 }

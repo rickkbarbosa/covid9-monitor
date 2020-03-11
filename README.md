@@ -1,4 +1,4 @@
-# covid9-monitor
+# covid19-monitor
 Gets information involving CORONAVIRUS - COVID19 casualities and presents to JSON and Zabbix
 
 ![Grafana](grafana_dashboard.png)
