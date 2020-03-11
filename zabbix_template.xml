@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-03-11T13:57:08Z</date>
+    <date>2020-03-11T17:16:39Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -64,6 +64,27 @@
                                 <step>
                                     <type>JSONPATH</type>
                                     <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].ActiveCases</params>
+                                </step>
+                            </preprocessing>
+                            <master_item>
+                                <key>covid9_status.py</key>
+                            </master_item>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>[ {#COUNTRY_NAME} ] - Cases per Million habitants</name>
+                            <type>DEPENDENT</type>
+                            <key>covid9.data[CasesperMillion, {#COUNTRY_NAME}]</key>
+                            <delay>0</delay>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>Covid Data</name>
+                                </application>
+                            </applications>
+                            <preprocessing>
+                                <step>
+                                    <type>JSONPATH</type>
+                                    <params>$.[ &quot;{#COUNTRY_NAME}&quot;  ].[ &quot;Tot Cases/1M pop&quot; ]</params>
                                 </step>
                             </preprocessing>
                             <master_item>
