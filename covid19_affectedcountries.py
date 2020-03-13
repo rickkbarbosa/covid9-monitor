@@ -19,14 +19,19 @@
 
 import pandas as pd
 import json
+import requests
 
 url = 'https://www.worldometers.info/coronavirus/#countries'
+header = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36","X-Requested-With": "XMLHttpRequest"}
 
-df = pd.read_html(url)[0]
+r = requests.get(url, headers=header)
+df = pd.read_html(r.text)[0]
+
 df = df['Country,Other']
 
 country_list = list()
 for i in range(0, len(df)):
     country_list.append({"{#COUNTRY_NAME}": df[i]})
 
-print json.dumps({"data": country_list}, indent=4)
+data = json.dumps({"data": country_list}, indent=4) 
+print(data)
