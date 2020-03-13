@@ -1,6 +1,7 @@
 # covid19-monitor
 Gets information involving CORONAVIRUS - COVID19 casualities and presents to JSON and Zabbix
 
+![Grafana](grafana_worldmap.png)
 ![Grafana](grafana_dashboard.png)
 
 
@@ -31,6 +32,12 @@ Add template to a host
 ### License
 
 See LICENSE
+
+
+### TODO
+
+* Adjust unformatted Country Names on Worldometer +  IBAN (Eg. "S. Korea"  and "S. Afria" instead "South Korea" and "South Africa" )
+
 
 ### Thanks 
 
