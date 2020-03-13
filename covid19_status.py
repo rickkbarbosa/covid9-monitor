@@ -18,9 +18,11 @@
 #===============================================================================
 
 import pandas as pd
+import requests
 
 url = 'https://www.worldometers.info/coronavirus/#countries'
 
+df = pd.read_html(requests.get(url,headers={'User-agent': 'Mozilla/5.0'}).text, index_col=0)[0]
 df = pd.read_html(url, index_col=0)[0]
 df = df.fillna('0')
 df = df.to_json(orient='index')
