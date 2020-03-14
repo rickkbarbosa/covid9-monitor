@@ -34,11 +34,6 @@ Add template to a host
 See LICENSE
 
 
-### TODO
-
-* Adjust unformatted Country Names on Worldometer +  IBAN (Eg. "S. Korea"  and "S. Afria" instead "South Korea" and "South Africa" )
-
-
 ### Thanks 
 
 * [Zabbix Brasil](https://t.me/ZabbixBrasil) , for reviews and help with cleanup/garbage collecting
