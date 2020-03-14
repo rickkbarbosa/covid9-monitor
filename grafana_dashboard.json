@@ -88,7 +88,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1584156688470,
+  "iteration": 1584156688489,
   "links": [],
   "panels": [
     {
@@ -821,7 +821,7 @@
         "displayMode": "gradient",
         "fieldOptions": {
           "calcs": [
-            "mean"
+            "last"
           ],
           "defaults": {
             "mappings": [],
@@ -847,31 +847,7 @@
           "application": {
             "filter": "Covid Data"
           },
-          "functions": [
-            {
-              "def": {
-                "category": "Filter",
-                "defaultParams": [
-                  "asc"
-                ],
-                "name": "sortSeries",
-                "params": [
-                  {
-                    "name": "direction",
-                    "options": [
-                      "asc",
-                      "desc"
-                    ],
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "desc"
-              ],
-              "text": "sortSeries(desc)"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "/.*/"
           },
@@ -1068,7 +1044,6 @@
           },
           "functions": [
             {
-              "added": false,
               "def": {
                 "category": "Alias",
                 "defaultParams": [],
@@ -1252,6 +1227,8 @@
         "min": false,
         "rightSide": true,
         "show": true,
+        "sort": "current",
+        "sortDesc": true,
         "total": true,
         "values": true
       },
@@ -1726,5 +1703,5 @@
   "timezone": "browser",
   "title": "COVID19 - Coronavirus",
   "uid": "9EA_k3vWz",
-  "version": 5
+  "version": 6
 }
