@@ -23,12 +23,6 @@
       "version": ""
     },
     {
-      "type": "panel",
-      "id": "gauge",
-      "name": "Gauge",
-      "version": ""
-    },
-    {
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
@@ -48,8 +42,20 @@
     },
     {
       "type": "panel",
+      "id": "grafana-worldmap-panel",
+      "name": "Worldmap Panel",
+      "version": "0.2.1"
+    },
+    {
+      "type": "panel",
       "id": "graph",
       "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
       "version": ""
     },
     {
@@ -82,9 +88,454 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1583953292350,
+  "iteration": 1584156688470,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 206,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "pluginVersion": "6.6.0",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "COVID19 General Info"
+          },
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "Covid 19 - Total Cases"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "20000,500000",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total Cases",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      "id": 220,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "pluginVersion": "6.6.0",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "COVID19 General Info"
+          },
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "Covid 19 - Total of Deaths"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "1,2",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": " Total of Deaths",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 12,
+        "y": 0
+      },
+      "id": 259,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "pluginVersion": "6.6.0",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "COVID19 General Info"
+          },
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "Covid 19 - Total Recovered"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total Recovered",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 246,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "pluginVersion": "6.6.0",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "COVID19 General Info"
+          },
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "Covid 19 - Total of Serious,Critical Cases"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total of Serious,Critical Cases",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
     {
       "collapsed": false,
       "datasource": "${DS_ZABBIX}",
@@ -92,51 +543,83 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 2
       },
-      "id": 98,
+      "id": 192,
       "panels": [],
-      "title": "Status",
+      "title": "General Info",
       "type": "row"
     },
     {
-      "aliasColors": {},
-      "breakPoint": "50%",
       "cacheTimeout": null,
-      "combine": {
-        "label": "Others",
-        "threshold": 0
-      },
+      "circleMaxSize": "50",
+      "circleMinSize": "5",
+      "colors": [
+        "#37872D",
+        "#F2CC0C",
+        "#C4162A"
+      ],
       "datasource": "${DS_ZABBIX}",
-      "fontSize": "80%",
-      "format": "short",
+      "decimals": 0,
+      "esMetric": "Count",
       "gridPos": {
-        "h": 7,
-        "w": 11,
+        "h": 10,
+        "w": 24,
         "x": 0,
-        "y": 1
+        "y": 3
       },
-      "id": 191,
-      "interval": null,
-      "legend": {
-        "percentage": true,
-        "show": true,
-        "values": true
-      },
-      "legendType": "Right side",
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 178,
+      "initialZoom": "2",
+      "jsonUrl": "",
       "links": [],
-      "maxDataPoints": 3,
-      "nullPointMode": "connected",
+      "locationData": "countries_3letter",
+      "mapCenter": "Europe",
+      "mapCenterLatitude": 46,
+      "mapCenterLongitude": 14,
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
       "options": {},
-      "pieType": "donut",
-      "pluginVersion": "6.6.0",
-      "strokeWidth": 1,
+      "pluginVersion": "6.6.2",
+      "showLegend": true,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "latitudeField": "latitude",
+        "longitudeField": "longitude",
+        "metricField": "metric",
+        "queryType": "geohash"
+      },
       "targets": [
         {
           "application": {
             "filter": "Covid Data"
           },
           "functions": [
+            {
+              "def": {
+                "category": "Filter",
+                "defaultParams": [
+                  "asc"
+                ],
+                "name": "sortSeries",
+                "params": [
+                  {
+                    "name": "direction",
+                    "options": [
+                      "asc",
+                      "desc"
+                    ],
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "desc"
+              ],
+              "text": "sortSeries(desc)"
+            },
             {
               "def": {
                 "category": "Alias",
@@ -150,9 +633,9 @@
                 ]
               },
               "params": [
-                "\\[.*\\]"
+                "[^\\ []+(?=\\ ])"
               ],
-              "text": "setAliasByRegex(\\[.*\\])"
+              "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
             }
           ],
           "group": {
@@ -162,7 +645,241 @@
             "filter": "/.*/"
           },
           "item": {
-            "filter": "/$countries - Serious/"
+            "filter": "/$countries - ActiveCases/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "10,100",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Active Cases",
+      "transparent": true,
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "unitSingular": "2",
+      "valueName": "total"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 207,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "pluginVersion": "6.6.0",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "application": {
+            "filter": "Covid Data"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Aggregate",
+                "defaultParams": [
+                  "1m"
+                ],
+                "name": "sum",
+                "params": [
+                  {
+                    "name": "interval",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "1m"
+              ],
+              "text": "sum(1m)"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "/$countries - TotalCases/"
+          },
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "50000,300000",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Active Cases  [Selected Countries] ",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "${DS_ZABBIX}",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "id": 110,
+      "links": [],
+      "options": {
+        "displayMode": "gradient",
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": [],
+          "values": false
+        },
+        "orientation": "horizontal",
+        "showUnfilled": true
+      },
+      "pluginVersion": "6.6.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "Covid Data"
+          },
+          "functions": [
+            {
+              "def": {
+                "category": "Filter",
+                "defaultParams": [
+                  "asc"
+                ],
+                "name": "sortSeries",
+                "params": [
+                  {
+                    "name": "direction",
+                    "options": [
+                      "asc",
+                      "desc"
+                    ],
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "desc"
+              ],
+              "text": "sortSeries(desc)"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "/$countries - ActiveCases/"
           },
           "mode": 0,
           "options": {
@@ -183,9 +900,9 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Serious/Critical Cases",
-      "type": "grafana-piechart-panel",
-      "valueName": "current"
+      "title": "Active Cases",
+      "transparent": true,
+      "type": "bargauge"
     },
     {
       "colors": [
@@ -195,10 +912,10 @@
       ],
       "datasource": "${DS_ZABBIX}",
       "gridPos": {
-        "h": 24,
-        "w": 6,
+        "h": 18,
+        "w": 5,
         "x": 12,
-        "y": 1
+        "y": 16
       },
       "id": 100,
       "maxDataPoints": "",
@@ -262,9 +979,9 @@
                 ]
               },
               "params": [
-                "\\[.+\\]"
+                "[^\\ []+(?=\\ ])"
               ],
-              "text": "setAliasByRegex(\\[.+\\])"
+              "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
             }
           ],
           "group": {
@@ -306,9 +1023,10 @@
         "h": 6,
         "w": 6,
         "x": 18,
-        "y": 1
+        "y": 16
       },
       "id": 152,
+      "maxDataPoints": "",
       "options": {
         "colorMode": "value",
         "fieldOptions": {
@@ -348,7 +1066,26 @@
           "application": {
             "filter": "Covid Data"
           },
-          "functions": [],
+          "functions": [
+            {
+              "added": false,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAliasByRegex",
+                "params": [
+                  {
+                    "name": "aliasByRegex",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "[^\\ []+(?=\\ ])"
+              ],
+              "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
+            }
+          ],
           "group": {
             "filter": "/.*/"
           },
@@ -382,6 +1119,7 @@
       "type": "stat"
     },
     {
+      "cacheTimeout": null,
       "columns": [
         {
           "text": "Current",
@@ -391,140 +1129,24 @@
       "datasource": "${DS_ZABBIX}",
       "fontSize": "100%",
       "gridPos": {
-        "h": 10,
+        "h": 15,
         "w": 6,
         "x": 18,
-        "y": 7
+        "y": 22
       },
-      "id": 192,
+      "id": 2,
+      "links": [],
       "maxDataPoints": "",
       "options": {},
       "pageSize": null,
+      "pluginVersion": "6.6.2",
+      "repeat": null,
       "showHeader": true,
       "sort": {
-        "col": 0,
+        "col": 1,
         "desc": true
       },
-      "styles": [
-        {
-          "alias": "Time",
-          "align": "auto",
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "pattern": "Time",
-          "type": "date"
-        },
-        {
-          "alias": "",
-          "align": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "decimals": 2,
-          "pattern": "/.*/",
-          "thresholds": [
-            "100",
-            "1000"
-          ],
-          "type": "number",
-          "unit": "short"
-        }
-      ],
-      "targets": [
-        {
-          "application": {
-            "filter": "Covid Data"
-          },
-          "functions": [
-            {
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAliasByRegex",
-                "params": [
-                  {
-                    "name": "aliasByRegex",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "\\[.+\\]"
-              ],
-              "text": "setAliasByRegex(\\[.+\\])"
-            }
-          ],
-          "group": {
-            "filter": "/.*/"
-          },
-          "host": {
-            "filter": "/.*/"
-          },
-          "item": {
-            "filter": "/$countries - Cases per Million habitants/"
-          },
-          "mode": 0,
-          "options": {
-            "showDisabledItems": false,
-            "skipEmptyValues": false
-          },
-          "refId": "A",
-          "resultFormat": "time_series",
-          "table": {
-            "skipEmptyValues": false
-          },
-          "triggers": {
-            "acknowledged": 2,
-            "count": true,
-            "minSeverity": 3
-          }
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Cases (per million of inhabitants)",
-      "transform": "timeseries_aggregations",
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "${DS_ZABBIX}",
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 8
-      },
-      "id": 110,
-      "links": [],
-      "options": {
-        "displayMode": "gradient",
-        "fieldOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "defaults": {
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                }
-              ]
-            }
-          },
-          "overrides": [],
-          "values": false
-        },
-        "orientation": "horizontal",
-        "showUnfilled": true
-      },
-      "pluginVersion": "6.6.0",
+      "styles": [],
       "targets": [
         {
           "application": {
@@ -567,9 +1189,9 @@
                 ]
               },
               "params": [
-                "\\[.+\\]"
+                "[^\\ []+(?=\\ ])"
               ],
-              "text": "setAliasByRegex(\\[.+\\])"
+              "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
             }
           ],
           "group": {
@@ -579,12 +1201,11 @@
             "filter": "/.*/"
           },
           "item": {
-            "filter": "/$countries - ActiveCases/"
+            "filter": "/$countries - TotalCases/"
           },
           "mode": 0,
           "options": {
-            "showDisabledItems": false,
-            "skipEmptyValues": false
+            "showDisabledItems": false
           },
           "refId": "A",
           "resultFormat": "time_series",
@@ -600,9 +1221,9 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Active Cases",
-      "transparent": true,
-      "type": "bargauge"
+      "title": "Total Cases",
+      "transform": "timeseries_aggregations",
+      "type": "table"
     },
     {
       "aliasColors": {},
@@ -617,7 +1238,7 @@
         "h": 10,
         "w": 11,
         "x": 0,
-        "y": 16
+        "y": 24
       },
       "hiddenSeries": false,
       "id": 135,
@@ -766,120 +1387,13 @@
       }
     },
     {
-      "cacheTimeout": null,
-      "columns": [
-        {
-          "text": "Current",
-          "value": "current"
-        }
-      ],
-      "datasource": "${DS_ZABBIX}",
-      "fontSize": "100%",
-      "gridPos": {
-        "h": 9,
-        "w": 6,
-        "x": 18,
-        "y": 17
-      },
-      "id": 2,
-      "links": [],
-      "maxDataPoints": "",
-      "options": {},
-      "pageSize": null,
-      "pluginVersion": "6.6.2",
-      "repeat": null,
-      "showHeader": true,
-      "sort": {
-        "col": 1,
-        "desc": true
-      },
-      "styles": [],
-      "targets": [
-        {
-          "application": {
-            "filter": "Covid Data"
-          },
-          "functions": [
-            {
-              "def": {
-                "category": "Filter",
-                "defaultParams": [
-                  "asc"
-                ],
-                "name": "sortSeries",
-                "params": [
-                  {
-                    "name": "direction",
-                    "options": [
-                      "asc",
-                      "desc"
-                    ],
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "desc"
-              ],
-              "text": "sortSeries(desc)"
-            },
-            {
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAliasByRegex",
-                "params": [
-                  {
-                    "name": "aliasByRegex",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "\\[.*\\]"
-              ],
-              "text": "setAliasByRegex(\\[.*\\])"
-            }
-          ],
-          "group": {
-            "filter": "/.*/"
-          },
-          "host": {
-            "filter": "/.*/"
-          },
-          "item": {
-            "filter": "/$countries - TotalCases/"
-          },
-          "mode": 0,
-          "options": {
-            "showDisabledItems": false
-          },
-          "refId": "A",
-          "resultFormat": "time_series",
-          "table": {
-            "skipEmptyValues": false
-          },
-          "triggers": {
-            "acknowledged": 2,
-            "count": true,
-            "minSeverity": 3
-          }
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Total Cases",
-      "transform": "timeseries_aggregations",
-      "type": "table"
-    },
-    {
       "collapsed": false,
       "datasource": "${DS_ZABBIX}",
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 37
       },
       "id": 78,
       "panels": [],
@@ -891,10 +1405,10 @@
       "datasource": "${DS_ZABBIX}",
       "description": "",
       "gridPos": {
-        "h": 9,
-        "w": 9,
+        "h": 10,
+        "w": 8,
         "x": 0,
-        "y": 27
+        "y": 38
       },
       "id": 82,
       "options": {
@@ -970,35 +1484,23 @@
       "type": "stat"
     },
     {
-      "cacheTimeout": null,
       "datasource": "${DS_ZABBIX}",
       "description": "",
       "gridPos": {
-        "h": 9,
-        "w": 7,
-        "x": 9,
-        "y": 27
+        "h": 10,
+        "w": 8,
+        "x": 8,
+        "y": 38
       },
-      "id": 169,
-      "links": [],
+      "id": 83,
       "options": {
+        "colorMode": "value",
         "fieldOptions": {
           "calcs": [
             "last"
           ],
           "defaults": {
-            "mappings": [
-              {
-                "id": 0,
-                "op": "=",
-                "text": "N/A",
-                "type": 1,
-                "value": "null"
-              }
-            ],
-            "max": 100,
-            "min": 0,
-            "nullValueMode": "connected",
+            "mappings": [],
             "thresholds": {
               "mode": "absolute",
               "steps": [
@@ -1007,27 +1509,20 @@
                   "value": null
                 },
                 {
-                  "color": "#EAB839",
-                  "value": 5
-                },
-                {
                   "color": "red",
-                  "value": 10
+                  "value": 80
                 }
               ]
-            },
-            "unit": "none"
+            }
           },
           "overrides": [],
           "values": false
         },
-        "orientation": "horizontal",
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto"
       },
       "pluginVersion": "6.6.0",
-      "repeat": null,
-      "repeatDirection": "h",
       "targets": [
         {
           "application": {
@@ -1041,7 +1536,7 @@
             "filter": "/.*/"
           },
           "item": {
-            "filter": "/$countries - Serious/"
+            "filter": "/$countries - NewCases/"
           },
           "mode": 0,
           "options": {
@@ -1062,9 +1557,9 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Serious/Critical",
+      "title": "New Cases",
       "transparent": true,
-      "type": "gauge"
+      "type": "stat"
     },
     {
       "aliasColors": {},
@@ -1079,10 +1574,10 @@
       "fontSize": "80%",
       "format": "short",
       "gridPos": {
-        "h": 11,
-        "w": 8,
+        "h": 10,
+        "w": 7,
         "x": 16,
-        "y": 27
+        "y": 38
       },
       "id": 103,
       "interval": null,
@@ -1229,7 +1724,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "COVID-19 / Coronavirus",
-  "uid": "9EA_kA2sWz",
-  "version": 7
+  "title": "COVID19 - Coronavirus",
+  "uid": "9EA_k3vWz",
+  "version": 5
 }

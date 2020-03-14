@@ -648,7 +648,7 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - ActiveCases</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - ActiveCases</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -719,7 +719,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Cases per Million habitants</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Cases per Million habitants</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -790,7 +790,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - NewCases</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - NewCases</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -861,7 +861,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - NewDeaths</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - NewDeaths</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -932,7 +932,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Serious,Critical</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Serious,Critical</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1003,7 +1003,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - TotalCases</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalCases</name>
                             <type>15</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1067,7 +1067,7 @@
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - TotalDeaths</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalDeaths</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1138,7 +1138,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - TotalRecovered</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - TotalRecovered</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>

@@ -645,7 +645,7 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Casos Ativos</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Casos Ativos</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -712,7 +712,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Total de Casos por Milhão de Habitantes</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Total de Casos por Milhão de Habitantes</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -779,7 +779,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Novos Casos</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Novos Casos</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -846,7 +846,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Novas Mortes</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Novas Mortes</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -913,7 +913,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Casos Sérios e Críticos</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Casos Sérios e Críticos</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -980,7 +980,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Total de Casos</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Total de Casos</name>
                             <type>15</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1040,7 +1040,7 @@
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Total de Mortes</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Total de Mortes</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1107,7 +1107,7 @@
                             </master_item>
                         </item_prototype>
                         <item_prototype>
-                            <name>[ {#COUNTRY_NAME} ] - Total de Curados</name>
+                            <name>[ {#COUNTRY_NAME} | {#COUNTRY_IBAN} ] - Total de Curados</name>
                             <type>18</type>
                             <snmp_community/>
                             <snmp_oid/>
