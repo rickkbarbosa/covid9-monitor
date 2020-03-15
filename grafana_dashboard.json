@@ -88,7 +88,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1584156688489,
+  "iteration": 1584300198821,
   "links": [],
   "panels": [
     {
@@ -673,7 +673,7 @@
       "unitPlural": "",
       "unitSingle": "",
       "unitSingular": "2",
-      "valueName": "total"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -1701,7 +1701,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "COVID19 - Coronavirus",
-  "uid": "9EA_k3vWz",
-  "version": 6
+  "title": "COVID-19 / Coronavirus",
+  "uid": "9EA_kA2sWz",
+  "version": 10
 }
