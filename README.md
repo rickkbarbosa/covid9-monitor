@@ -20,6 +20,15 @@ Add template to a host
 
 ![Using on Zabbix](zabbix_template.png)
 
+
+## Additional adjustment on Zabbix 4.0.x versions:
+
+Zabbiux 4.0.x contains a limitation involving number of dependendant items. 
+A proposed workaround was sugested by [@hardwareadictos](https://github.com/rickkbarbosa/covid9-monitor/issues/10):
+
+*  Change _/usr/share/zabbix/include/defines.inc.php:define('ZBX_DEPENDENT_ITEM_MAX_COUNT', 999)_; to 2999. 
+
+
 ### To grafana
 
 * Install Zabbix Plugin datasource by [Alexander Zobnin](https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app)
@@ -37,3 +46,4 @@ See LICENSE
 
 * [Zabbix Brasil](https://t.me/ZabbixBrasil) , for reviews and help with cleanup/garbage collecting
 * Everaldo Santos Cabral, for Suggested applications organiztions and Zabbix 4.0 retro-compatible template
+* [MrBits](https://github.com/mrbitsdcf)
