@@ -88,7 +88,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1584474705498,
+  "iteration": 1584474705509,
   "links": [],
   "panels": [
     {
@@ -907,7 +907,7 @@
         "fontAutoScale": true,
         "fontSize": 12,
         "fontType": "Roboto",
-        "globalDecimals": 2,
+        "globalDecimals": 0,
         "globalDisplayMode": "all",
         "globalDisplayTextTriggeredEmpty": "OK",
         "globalOperatorName": "avg",
@@ -1703,5 +1703,5 @@
   "timezone": "browser",
   "title": "COVID-19 / Coronavirus",
   "uid": "9EA_kA2sWz",
-  "version": 12
+  "version": 13
 }
