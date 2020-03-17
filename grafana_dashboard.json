@@ -88,7 +88,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1584300198821,
+  "iteration": 1584474705498,
   "links": [],
   "panels": [
     {
@@ -1392,7 +1392,7 @@
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "mean"
+            "lastNotNull"
           ],
           "defaults": {
             "mappings": [],
@@ -1638,7 +1638,7 @@
       "title": "Casualities",
       "transparent": true,
       "type": "grafana-piechart-panel",
-      "valueName": "total"
+      "valueName": "current"
     }
   ],
   "refresh": "1m",
@@ -1703,5 +1703,5 @@
   "timezone": "browser",
   "title": "COVID-19 / Coronavirus",
   "uid": "9EA_kA2sWz",
-  "version": 10
+  "version": 12
 }
