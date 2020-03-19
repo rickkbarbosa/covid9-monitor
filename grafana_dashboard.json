@@ -88,9 +88,21 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1584474705509,
+  "iteration": 1584585595762,
   "links": [],
   "panels": [
+    {
+      "datasource": "${DS_ZABBIX}",
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 261,
+      "title": "Row title",
+      "type": "row"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": true,
@@ -114,7 +126,7 @@
         "h": 2,
         "w": 6,
         "x": 0,
-        "y": 0
+        "y": 1
       },
       "id": 206,
       "interval": null,
@@ -225,7 +237,7 @@
         "h": 2,
         "w": 6,
         "x": 6,
-        "y": 0
+        "y": 1
       },
       "id": 220,
       "interval": null,
@@ -336,7 +348,7 @@
         "h": 2,
         "w": 6,
         "x": 12,
-        "y": 0
+        "y": 1
       },
       "id": 259,
       "interval": null,
@@ -447,7 +459,7 @@
         "h": 2,
         "w": 6,
         "x": 18,
-        "y": 0
+        "y": 1
       },
       "id": 246,
       "interval": null,
@@ -543,7 +555,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 2
+        "y": 3
       },
       "id": 192,
       "panels": [],
@@ -566,7 +578,7 @@
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 3
+        "y": 4
       },
       "hideEmpty": false,
       "hideZero": false,
@@ -697,7 +709,7 @@
         "h": 3,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 14
       },
       "id": 207,
       "interval": null,
@@ -813,7 +825,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 16
+        "y": 17
       },
       "id": 110,
       "links": [],
@@ -891,7 +903,7 @@
         "h": 18,
         "w": 5,
         "x": 12,
-        "y": 16
+        "y": 17
       },
       "id": 100,
       "maxDataPoints": "",
@@ -999,7 +1011,7 @@
         "h": 6,
         "w": 6,
         "x": 18,
-        "y": 16
+        "y": 17
       },
       "id": 152,
       "maxDataPoints": "",
@@ -1107,7 +1119,7 @@
         "h": 15,
         "w": 6,
         "x": 18,
-        "y": 22
+        "y": 23
       },
       "id": 2,
       "links": [],
@@ -1213,7 +1225,7 @@
         "h": 10,
         "w": 11,
         "x": 0,
-        "y": 24
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 135,
@@ -1364,13 +1376,914 @@
       }
     },
     {
+      "collapsed": true,
+      "datasource": "${DS_ZABBIX}",
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 38
+      },
+      "id": 263,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "description": "",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 6,
+            "x": 0,
+            "y": 39
+          },
+          "hiddenSeries": false,
+          "hideTimeOverride": true,
+          "id": 264,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "maxPerRow": 4,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 1,
+          "points": true,
+          "renderer": "flot",
+          "repeat": "countries",
+          "repeatDirection": "h",
+          "scopedVars": {
+            "countries": {
+              "selected": true,
+              "text": "[ Argentina | ARG ]",
+              "value": "[ Argentina | ARG ]"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Covid Data"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAliasByRegex",
+                    "params": [
+                      {
+                        "name": "aliasByRegex",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "[^\\ []+(?=\\ ])"
+                  ],
+                  "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
+                }
+              ],
+              "group": {
+                "filter": "/.*/"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "/$countries - ActiveCases/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false,
+                "skipEmptyValues": false
+              },
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": "5d",
+          "timeRegions": [],
+          "timeShift": "1d",
+          "title": "$countries",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "description": "",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 6,
+            "x": 6,
+            "y": 39
+          },
+          "hiddenSeries": false,
+          "hideTimeOverride": true,
+          "id": 290,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "maxPerRow": 4,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 1,
+          "points": true,
+          "renderer": "flot",
+          "repeat": null,
+          "repeatDirection": "h",
+          "repeatIteration": 1584585595761,
+          "repeatPanelId": 264,
+          "scopedVars": {
+            "countries": {
+              "selected": true,
+              "text": "[ Brazil | BRA ]",
+              "value": "[ Brazil | BRA ]"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Covid Data"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAliasByRegex",
+                    "params": [
+                      {
+                        "name": "aliasByRegex",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "[^\\ []+(?=\\ ])"
+                  ],
+                  "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
+                }
+              ],
+              "group": {
+                "filter": "/.*/"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "/$countries - ActiveCases/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false,
+                "skipEmptyValues": false
+              },
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": "5d",
+          "timeRegions": [],
+          "timeShift": "1d",
+          "title": "$countries",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "description": "",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 6,
+            "x": 12,
+            "y": 39
+          },
+          "hiddenSeries": false,
+          "hideTimeOverride": true,
+          "id": 291,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "maxPerRow": 4,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 1,
+          "points": true,
+          "renderer": "flot",
+          "repeat": null,
+          "repeatDirection": "h",
+          "repeatIteration": 1584585595761,
+          "repeatPanelId": 264,
+          "scopedVars": {
+            "countries": {
+              "selected": true,
+              "text": "[ China | CHN ]",
+              "value": "[ China | CHN ]"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Covid Data"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAliasByRegex",
+                    "params": [
+                      {
+                        "name": "aliasByRegex",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "[^\\ []+(?=\\ ])"
+                  ],
+                  "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
+                }
+              ],
+              "group": {
+                "filter": "/.*/"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "/$countries - ActiveCases/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false,
+                "skipEmptyValues": false
+              },
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": "5d",
+          "timeRegions": [],
+          "timeShift": "1d",
+          "title": "$countries",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "description": "",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 6,
+            "x": 18,
+            "y": 39
+          },
+          "hiddenSeries": false,
+          "hideTimeOverride": true,
+          "id": 292,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "maxPerRow": 4,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 1,
+          "points": true,
+          "renderer": "flot",
+          "repeat": null,
+          "repeatDirection": "h",
+          "repeatIteration": 1584585595761,
+          "repeatPanelId": 264,
+          "scopedVars": {
+            "countries": {
+              "selected": true,
+              "text": "[ Italy | ITA ]",
+              "value": "[ Italy | ITA ]"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Covid Data"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAliasByRegex",
+                    "params": [
+                      {
+                        "name": "aliasByRegex",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "[^\\ []+(?=\\ ])"
+                  ],
+                  "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
+                }
+              ],
+              "group": {
+                "filter": "/.*/"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "/$countries - ActiveCases/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false,
+                "skipEmptyValues": false
+              },
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": "5d",
+          "timeRegions": [],
+          "timeShift": "1d",
+          "title": "$countries",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "description": "",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 6,
+            "x": 0,
+            "y": 48
+          },
+          "hiddenSeries": false,
+          "hideTimeOverride": true,
+          "id": 293,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "maxPerRow": 4,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 1,
+          "points": true,
+          "renderer": "flot",
+          "repeat": null,
+          "repeatDirection": "h",
+          "repeatIteration": 1584585595761,
+          "repeatPanelId": 264,
+          "scopedVars": {
+            "countries": {
+              "selected": true,
+              "text": "[ Paraguay | PRY ]",
+              "value": "[ Paraguay | PRY ]"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Covid Data"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAliasByRegex",
+                    "params": [
+                      {
+                        "name": "aliasByRegex",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "[^\\ []+(?=\\ ])"
+                  ],
+                  "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
+                }
+              ],
+              "group": {
+                "filter": "/.*/"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "/$countries - ActiveCases/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false,
+                "skipEmptyValues": false
+              },
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": "5d",
+          "timeRegions": [],
+          "timeShift": "1d",
+          "title": "$countries",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "description": "",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 6,
+            "x": 6,
+            "y": 48
+          },
+          "hiddenSeries": false,
+          "hideTimeOverride": true,
+          "id": 294,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "maxPerRow": 4,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pluginVersion": "6.6.0",
+          "pointradius": 1,
+          "points": true,
+          "renderer": "flot",
+          "repeat": null,
+          "repeatDirection": "h",
+          "repeatIteration": 1584585595761,
+          "repeatPanelId": 264,
+          "scopedVars": {
+            "countries": {
+              "selected": true,
+              "text": "[ UK | GBR ]",
+              "value": "[ UK | GBR ]"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Covid Data"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAliasByRegex",
+                    "params": [
+                      {
+                        "name": "aliasByRegex",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "[^\\ []+(?=\\ ])"
+                  ],
+                  "text": "setAliasByRegex([^\\ []+(?=\\ ]))"
+                }
+              ],
+              "group": {
+                "filter": "/.*/"
+              },
+              "host": {
+                "filter": "/.*/"
+              },
+              "item": {
+                "filter": "/$countries - ActiveCases/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false,
+                "skipEmptyValues": false
+              },
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": "5d",
+          "timeRegions": [],
+          "timeShift": "1d",
+          "title": "$countries",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "title": "Active Cases (5-days)",
+      "type": "row"
+    },
+    {
       "collapsed": false,
       "datasource": "${DS_ZABBIX}",
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 37
+        "y": 39
       },
       "id": 78,
       "panels": [],
@@ -1385,7 +2298,7 @@
         "h": 10,
         "w": 8,
         "x": 0,
-        "y": 38
+        "y": 40
       },
       "id": 82,
       "options": {
@@ -1467,7 +2380,7 @@
         "h": 10,
         "w": 8,
         "x": 8,
-        "y": 38
+        "y": 40
       },
       "id": 83,
       "options": {
@@ -1554,7 +2467,7 @@
         "h": 10,
         "w": 7,
         "x": 16,
-        "y": 38
+        "y": 40
       },
       "id": 103,
       "interval": null,
@@ -1672,7 +2585,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {
@@ -1703,5 +2616,5 @@
   "timezone": "browser",
   "title": "COVID-19 / Coronavirus",
   "uid": "9EA_kA2sWz",
-  "version": 13
+  "version": 16
 }
