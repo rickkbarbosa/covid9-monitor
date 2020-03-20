@@ -7,6 +7,7 @@
 #   DESCRIPTION:  Get Worldometers Coronavirus / Covid9 data and print to JSON
 #  REQUIREMENTS:  pandas (pip install pandas)
 #                 lxml (pip install lxml)
+#                 beautifulsoup4 (pip install beautifulsoup4)
 #          BUGS:  ---
 #         NOTES:  ---
 #          TODO:  ---
@@ -14,19 +15,25 @@
 #       COMPANY:  ---
 #       VERSION:  1.0
 #       CREATED:  2020-Mar-10 21:47 BRT
-#      REVISION:  ---
+#      REVISION:  2020-Mar-20 09:33 BRT
 #===============================================================================
 
 import pandas as pd
 import requests
+from bs4 import BeautifulSoup
 
 url = 'https://www.worldometers.info/coronavirus/#countries'
 header = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36","X-Requested-With": "XMLHttpRequest"}
 
-url = 'https://www.worldometers.info/coronavirus/#countries'
-
 r = requests.get(url, headers=header)
-df = pd.read_html(r.text, index_col=0)[0]
+
+# fix HTML multiple tbody
+soup = BeautifulSoup(r.text, "html.parser")
+for body in soup("tbody"):
+    body.unwrap()
+
+df = pd.read_html(str(soup), index_col=0, flavor="bs4")[0]
+
 df = df.fillna('0')
 df = df.to_json(orient='index')
 

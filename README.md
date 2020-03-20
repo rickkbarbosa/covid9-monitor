@@ -32,6 +32,7 @@ A proposed workaround was sugested by [@hardwareadictos](https://github.com/rick
 ### To grafana
 
 * Install Zabbix Plugin datasource by [Alexander Zobnin](https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app)
+* Install Worldmap Panel plugin(https://grafana.com/grafana/plugins/grafana-worldmap-panel/installation)
 * Install Polystat Grafana plugin(https://grafana.com/grafana/plugins/grafana-polystat-panel/installation)
 * Install Multistat Grafana plugin(https://grafana.com/grafana/plugins/michaeldmoore-multistat-panel)
 * Import dashboard _grafana_dashboard.json_ to grafana 
