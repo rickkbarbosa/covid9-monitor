@@ -88,7 +88,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1584585595762,
+  "iteration": 1584966761141,
   "links": [],
   "panels": [
     {
@@ -1241,24 +1241,25 @@
         "show": true,
         "sort": "current",
         "sortDesc": true,
-        "total": true,
+        "total": false,
         "values": true
       },
       "lines": false,
       "linewidth": 1,
       "links": [],
+      "maxDataPoints": "",
       "nullPointMode": "null",
       "options": {
         "dataLinks": []
       },
-      "percentage": true,
+      "percentage": false,
       "pluginVersion": "6.6.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
       "spaceLength": 10,
-      "stack": true,
+      "stack": false,
       "steppedLine": false,
       "targets": [
         {
@@ -1341,16 +1342,18 @@
       "tooltip": {
         "shared": false,
         "sort": 0,
-        "value_type": "individual"
+        "value_type": "cumulative"
       },
       "transparent": true,
       "type": "graph",
       "xaxis": {
         "buckets": null,
-        "mode": "time",
+        "mode": "series",
         "name": null,
         "show": true,
-        "values": []
+        "values": [
+          "current"
+        ]
       },
       "yaxes": [
         {
@@ -2616,5 +2619,5 @@
   "timezone": "browser",
   "title": "COVID-19 / Coronavirus",
   "uid": "9EA_kA2sWz",
-  "version": 16
+  "version": 17
 }
