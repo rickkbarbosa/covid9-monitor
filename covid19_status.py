@@ -32,7 +32,8 @@ soup = BeautifulSoup(r.text, "html.parser")
 for body in soup("tbody"):
     body.unwrap()
 
-df = pd.read_html(str(soup), index_col=0, flavor="bs4")[0]
+df = pd.read_html(str(soup), index_col=0, thousands=r',', flavor="bs4")[0]
+df = df.replace(regex=[r'\+', r'\,'], value='')
 
 df = df.fillna('0')
 df = df.to_json(orient='index')
