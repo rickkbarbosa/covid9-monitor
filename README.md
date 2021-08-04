@@ -50,3 +50,11 @@ See LICENSE
 * [Zabbix Brasil](https://t.me/ZabbixBrasil) , for reviews and help with cleanup/garbage collecting
 * Everaldo Santos Cabral, for Suggested applications organiztions and Zabbix 4.0 retro-compatible template
 * [MrBits](https://github.com/mrbitsdcf)
+
+
+### Donate 
+
+
+* [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=29JLND674CAGY&currency_code=BRL)
+
+* ![Grafana](qr_code.png)

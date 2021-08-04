@@ -22,6 +22,7 @@ import sys
 import os
 import pandas as pd
 import json
+import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -36,10 +37,13 @@ here = os.path.dirname(os.path.abspath(__file__))
 url = 'https://www.worldometers.info/coronavirus/#countries'
 header = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36","X-Requested-With": "XMLHttpRequest"}
 
-r = requests.get(url, headers=header)
+r = requests.get(url, headers=header).text
+r = re.sub(r'.*(<table id="main_table_countries_today".*?>.*?<\/table>).*', r'\1', r, flags=re.DOTALL)
+r = re.sub(r'<tbody class="body_continents">.*?<\/tbody>', '', r, flags=re.DOTALL)
+r = re.sub(r'<.*?>', lambda g: g.group(0).upper(), r)
 
 # fix HTML multiple tbody
-soup = BeautifulSoup(r.text, "html.parser")
+soup = BeautifulSoup(r, "html.parser")
 for body in soup("tbody"):
     body.unwrap()
 
