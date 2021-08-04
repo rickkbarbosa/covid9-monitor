@@ -21,7 +21,7 @@ Add template to a host
 ![Using on Zabbix](zabbix_template.png)
 
 
-## Additional adjustment on Zabbix 4.0.x versions:
+## Additional adjustment on Zabbix 4.0.x versions :
 
 Zabbiux 4.0.x contains a limitation involving number of dependendant items. 
 A proposed workaround was sugested by [@hardwareadictos](https://github.com/rickkbarbosa/covid9-monitor/issues/10):
